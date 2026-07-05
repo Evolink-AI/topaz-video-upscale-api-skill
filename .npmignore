@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+.env
+.git/
+.github/
+.codex/
+tmp/
+reports/
+README.*.md
+scripts/validate_repo.py
+__pycache__/
+*.pyc

@@ -1,0 +1,48 @@
+{
+  "name": "evolink-topaz-video-upscale",
+  "version": "1.0.1",
+  "description": "Topaz Video Upscale API and agent skill for EvoLink video upscaling",
+  "readmeFilename": "README.md",
+  "bin": {
+    "evolink-topaz-video-upscale": "bin/cli.js"
+  },
+  "scripts": {
+    "prepublishOnly": "node scripts/guard-staged-publish.js"
+  },
+  "files": [
+    "bin/",
+    "SKILL.md",
+    "llms-install.md",
+    "_meta.json",
+    "scripts/",
+    "references/",
+    "docs/",
+    "examples/",
+    "assets/",
+    "LICENSE",
+    "!README.*.md",
+    "!scripts/validate_repo.py",
+    "!**/__pycache__/",
+    "!**/*.pyc"
+  ],
+  "keywords": [
+    "topaz-video-upscale",
+    "video-upscale",
+    "video-enhancement",
+    "evolink",
+    "codex",
+    "claude-code",
+    "hermes-agent",
+    "agent-skill"
+  ],
+  "author": "EvoLink AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvoLinkAI/topaz-video-upscale-api-skill.git"
+  },
+  "homepage": "https://evolink.ai",
+  "engines": {
+    "node": ">=16"
+  }
+}

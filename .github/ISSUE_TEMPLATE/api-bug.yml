@@ -1,0 +1,19 @@
+name: API bug
+description: Report an EvoLink Topaz Video Upscale API integration issue.
+title: "[API] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include sanitized command output. Do not include API keys.
+    validations:
+      required: true
