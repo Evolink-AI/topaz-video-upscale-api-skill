@@ -39,7 +39,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvoLinkAI/topaz-video-upscale-api-skill.git"
+    "url": "git+https://github.com/Evolink-AI/topaz-video-upscale-api-skill.git"
   },
   "homepage": "https://evolink.ai",
   "engines": {

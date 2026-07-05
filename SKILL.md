@@ -1,8 +1,8 @@
 ---
 name: topaz-video-upscale
 description: Topaz Video Upscale via EvoLink API for Codex, Claude Code, Hermes Agent, and other agents. Use when the user wants to upscale or enhance a video URL with Topaz, choose 1x/2x/4x upscale factors, submit an async video task, poll for completion, handle callbacks, or install/run the EvoLink Topaz Video Upscale skill.
-homepage: https://github.com/EvoLinkAI/topaz-video-upscale-api-skill
-metadata: {"openclaw":{"homepage":"https://github.com/EvoLinkAI/topaz-video-upscale-api-skill","requires":{"bins":["curl","python3"],"env":["EVOLINK_API_KEY"]},"primaryEnv":"EVOLINK_API_KEY"}}
+homepage: https://github.com/Evolink-AI/topaz-video-upscale-api-skill
+metadata: {"openclaw":{"homepage":"https://github.com/Evolink-AI/topaz-video-upscale-api-skill","requires":{"bins":["curl","python3"],"env":["EVOLINK_API_KEY"]},"primaryEnv":"EVOLINK_API_KEY"}}
 ---
 
 # Topaz Video Upscale

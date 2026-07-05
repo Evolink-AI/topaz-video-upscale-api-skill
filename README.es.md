@@ -58,7 +58,7 @@ npx evolink-topaz-video-upscale@latest -y --path ~/.codex/skills
 Manual local install:
 
 ```bash
-git clone https://github.com/EvoLinkAI/topaz-video-upscale-api-skill.git
+git clone https://github.com/Evolink-AI/topaz-video-upscale-api-skill.git
 cd topaz-video-upscale-api-skill
 node bin/cli.js -y --path ~/.codex/skills
 ```

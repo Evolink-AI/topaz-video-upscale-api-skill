@@ -52,7 +52,7 @@ The first-run request path includes EvoLink attribution headers: `X-EvoLink-Sour
 
 - [Topaz Video Upscale model page](https://evolink.ai/topaz-video-upscale?utm_source=npm&utm_medium=package&utm_campaign=topaz-video-upscale-skill)
 - [EvoLink API Keys](https://evolink.ai/dashboard/keys?utm_source=npm&utm_medium=package&utm_campaign=topaz-video-upscale-skill)
-- [GitHub repository](https://github.com/EvoLinkAI/topaz-video-upscale-api-skill)
+- [GitHub repository](https://github.com/Evolink-AI/topaz-video-upscale-api-skill)
 
 ## License
 
