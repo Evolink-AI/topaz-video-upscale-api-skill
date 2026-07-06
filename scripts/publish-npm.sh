@@ -24,6 +24,18 @@ if [[ -z "${NODE_AUTH_TOKEN:-}" && -n "${npm_token:-}" ]]; then
   export NODE_AUTH_TOKEN="$npm_token"
 fi
 
+TOKEN_NPMRC=""
+if [[ -n "${NODE_AUTH_TOKEN:-}" ]]; then
+  TOKEN_NPMRC="$(mktemp)"
+  chmod 600 "$TOKEN_NPMRC"
+  {
+    echo "registry=https://registry.npmjs.org/"
+    echo '//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}'
+    echo "always-auth=true"
+  } > "$TOKEN_NPMRC"
+  export NPM_CONFIG_USERCONFIG="$TOKEN_NPMRC"
+fi
+
 publish_args=(publish --access public)
 if [[ -z "${NODE_AUTH_TOKEN:-}" ]]; then
   publish_args+=(--auth-type=web)
@@ -39,6 +51,10 @@ if grep -Eq "EOTP|one-time password|--otp" "$PUBLISH_LOG"; then
   echo "publish_status=blocked"
   echo "publish_blocker=publish remediation blocked: npm browser/web authentication required; do not request OTP"
   exit 23
+fi
+
+if [[ -n "$TOKEN_NPMRC" ]]; then
+  rm -f "$TOKEN_NPMRC"
 fi
 
 exit "$publish_status"
