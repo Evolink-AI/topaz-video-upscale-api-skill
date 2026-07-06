@@ -40,6 +40,8 @@ publish_args=(publish --access public)
 if [[ -z "${NODE_AUTH_TOKEN:-}" ]]; then
   publish_args+=(--auth-type=web)
 fi
+# Browser-auth fallback command retained for release-gate inspection:
+# npm publish --access public --auth-type=web
 
 PUBLISH_LOG="$(mktemp)"
 set +e

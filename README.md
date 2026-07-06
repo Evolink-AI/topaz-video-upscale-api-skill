@@ -46,6 +46,12 @@ Use this package when an agent needs to upscale or enhance one public or pre-sig
 Preferred Agent install:
 
 ```bash
+npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale
+```
+
+Registry shortcut:
+
+```bash
 skills.sh add evolink-topaz-video-upscale@latest
 ```
 
@@ -72,9 +78,13 @@ Copy this prompt to an agent:
 ```text
 Install the Topaz Video Upscale skill by running:
 
+npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale
+
+Registry shortcut:
+
 skills.sh add evolink-topaz-video-upscale@latest
 
-If skills.sh is unavailable, use:
+If skills.sh or the skills registry is unavailable, use:
 
 npx evolink-topaz-video-upscale@latest -y --path ~/.codex/skills
 
@@ -184,10 +194,10 @@ Docs:
 
 | Agent | Preferred command |
 |---|---|
-| Hermes Agent | `skills.sh add evolink-topaz-video-upscale@latest` |
-| Claude Code | `skills.sh add evolink-topaz-video-upscale@latest` |
-| Codex | `skills.sh add evolink-topaz-video-upscale@latest` |
-| OpenClaw | `skills.sh add evolink-topaz-video-upscale@latest` |
+| Hermes Agent | `npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale` |
+| Claude Code | `npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale` |
+| Codex | `npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale` |
+| OpenClaw | `npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale` |
 
 <a id="community"></a>
 
@@ -197,7 +207,7 @@ Use GitHub issues for API docs bugs, installer issues, or example corrections. D
 
 ## Publication Gate
 
-Republish only after owner approval. Use `scripts/publish-npm.sh`, which stages `README.npm.md` as `README.md`, runs `npm pack --dry-run --json --ignore-scripts`, and then runs `npm publish --access public --auth-type=web` without requesting an OTP.
+Republish only after owner approval. Use `scripts/publish-npm.sh`, which stages `README.npm.md` as `README.md`, runs `npm pack --dry-run --json --ignore-scripts`, prefers a token-backed publish when `NODE_AUTH_TOKEN` is present, and keeps `npm publish --access public --auth-type=web` as the browser-auth fallback without requesting an OTP.
 
 <p align="center">Powered by EvoLink</p>
 

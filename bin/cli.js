@@ -27,9 +27,12 @@ Usage:
   npx evolink-topaz-video-upscale --help          show help
 
 Preferred Agent install:
+  npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale
+
+Registry shortcut:
   skills.sh add evolink-topaz-video-upscale@latest
 
-Fallback only when skills.sh is unavailable:
+Fallback only when skills.sh or the skills registry is unavailable:
   npx evolink-topaz-video-upscale@latest -y --path <skills-dir>
 `);
 }

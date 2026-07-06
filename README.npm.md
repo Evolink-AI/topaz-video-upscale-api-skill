@@ -7,10 +7,16 @@ Installable agent skill and runnable API examples for `topaz-video-upscale` on E
 Preferred Agent install:
 
 ```bash
+npx skills add https://github.com/Evolink-AI/topaz-video-upscale-api-skill/tree/main/skills/topaz-video-upscale
+```
+
+Registry shortcut:
+
+```bash
 skills.sh add evolink-topaz-video-upscale@latest
 ```
 
-Fallback only when `skills.sh` is unavailable:
+Fallback only when `skills.sh` or the skills registry is unavailable:
 
 ```bash
 npx evolink-topaz-video-upscale@latest -y --path ~/.codex/skills
