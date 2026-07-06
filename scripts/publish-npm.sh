@@ -20,9 +20,18 @@ rm -f "$STAGING"/README.*.md
 cd "$STAGING"
 npm pack --dry-run --json --ignore-scripts
 
+if [[ -z "${NODE_AUTH_TOKEN:-}" && -n "${npm_token:-}" ]]; then
+  export NODE_AUTH_TOKEN="$npm_token"
+fi
+
+publish_args=(publish --access public)
+if [[ -z "${NODE_AUTH_TOKEN:-}" ]]; then
+  publish_args+=(--auth-type=web)
+fi
+
 PUBLISH_LOG="$(mktemp)"
 set +e
-EVOLINK_STAGED_NPM_PUBLISH=1 npm publish --access public --auth-type=web 2>&1 | tee "$PUBLISH_LOG"
+EVOLINK_STAGED_NPM_PUBLISH=1 npm "${publish_args[@]}" 2>&1 | tee "$PUBLISH_LOG"
 publish_status=${PIPESTATUS[0]}
 set -e
 
